@@ -1,0 +1,27 @@
+<div *ngIf="loading" class="spinner">
+  <mat-spinner 
+    [diameter]="30">
+  </mat-spinner>
+</div>
+<div class="news-page">
+  <news 
+    [(query)]="activeQuery"
+    (queryChange)="onQueryChange($event)"
+    [articleBriefs]="articleBriefs" 
+    (articleSelect)="onArticleSelected($event.articleId)" 
+    (newsScrollDownThresholdReach)="onNewsScrollDownThresholdReached()">
+  </news>  
+</div>
+<div class="modal" *ngIf="selectedArticle && !loading" >
+  <div class="article-page">
+    <back-button 
+      [position]="backBtnPosition" 
+      (click)="onBackToNewsClick()">
+    </back-button>
+    <div class="article-wrapper" [style.padding]="getArticleMargin()">
+      <article 
+        [article]="selectedArticle">
+      </article>
+    </div>
+  </div>
+</div>

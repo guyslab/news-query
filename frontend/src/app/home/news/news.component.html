@@ -1,0 +1,11 @@
+<div class="container">
+    <news-query 
+        [(query)]="query" 
+        (queryChange)="onQueryChanged($event)">
+    </news-query>
+    <news-results 
+        (articleSelect)="onArticleSelected($event)"
+        (scrollDownThresholdReach)="onScrollDownThresholdReached()"
+        [articleBriefs]="articleBriefs">
+    </news-results>
+</div>

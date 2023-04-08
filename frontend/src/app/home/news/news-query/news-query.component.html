@@ -1,0 +1,6 @@
+<div class="half-size-input">
+    <input type="text" placeholder="Enter text..." [value]="query.searchText" (input)="onSearchInput($event)">
+</div>
+<div class="tags">        
+    <span class="tag" *ngFor="let category of categories" [class.selected]="query.category === category" (click)="onCategoryClick(category)">{{category}}</span>
+</div>

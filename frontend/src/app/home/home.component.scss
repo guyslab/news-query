@@ -1,0 +1,46 @@
+.spinner {
+    display: flex;
+    justify-content: center;
+    padding: 8px 0;
+    position: fixed;
+    background-color: #fff;
+    width:100%
+  }
+
+  .article-wrapper{
+    height: 100%;
+
+    article {
+      height: 100%;
+    }
+  }
+
+  .modal {
+    position: absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba($color: #ffffff, $alpha: 0.85);
+    width: 100%;
+
+    .article-page {
+      height: calc(100vh - 142px);
+  
+      article {
+        display: contents;
+      }
+    }
+  }
+  
+
+  .news-page {
+    
+    news {
+      display: contents;
+    }
+  }
+
+  body {
+    height: 100%;
+  }

@@ -1,0 +1,10 @@
+<div class="card" [style.background]="getBgColor()">
+  <ul *ngIf="article">
+    <li>{{article.title}}</li>
+    <li>{{article.published_date | isoToLocaleDate}}</li>
+    <li>{{article.author}}</li>
+    <li><img [src]="article.image_url" style="max-width: 360px"/></li>
+    <li>{{article.description}}</li>
+    <li>{{article.content}}</li>
+  </ul>
+</div>

@@ -1,0 +1,16 @@
+<div class="scrollable-card" (scroll)="onScroll($event)">
+    <div 
+        class="tile" 
+        *ngFor="let article of articleBriefs; trackBy:identifyArticle" 
+        [style.background]="getBgColor(article)"
+        (click)="onArticleClick(article.article_id)">
+        <span class="article-image">
+            <img [src]="article.image_url" />
+        </span>
+        <ul>
+            <li>{{article.title}}</li>
+            <li>{{article.published_date | isoToLocaleDate}}</li>
+            <li>{{article.description | truncate:80}}</li>
+        </ul>
+    </div>        
+</div>

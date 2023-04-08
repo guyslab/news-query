@@ -1,0 +1,23 @@
+$btn-horizontal-margin: 16px;
+$btn-vertical-margin: 32px;
+.back-btn {
+    display: inline;
+    position: absolute;
+    cursor: pointer;
+    &.top-left {
+      top: $btn-vertical-margin;
+      left: $btn-horizontal-margin;
+    }
+    &.top-right {
+      top: $btn-vertical-margin;
+      right: $btn-horizontal-margin;
+    }
+    &.bottom-left {
+      bottom: $btn-vertical-margin;
+      left: $btn-horizontal-margin;
+    }
+    &.bottom-right {
+      bottom: $btn-vertical-margin;
+      right: $btn-horizontal-margin;
+    }
+  }

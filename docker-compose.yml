@@ -1,0 +1,17 @@
+version: '3.7'
+services: 
+    api:
+        container_name: api
+        build: 
+            context: ./api
+        ports: 
+          - "5005:3000"
+        environment:
+          - TOP_HEADLINES_API_BASEURI=https://newsapi.org/v2/top-headlines?country=us&apiKey=<API_KEY>
+          - ARTICLE_IMAGE_MOCK_URI=https://images.placeholders.dev/?width=256&height=256
+    frontend:
+        container_name: frontend
+        build: 
+            context: ./frontend
+        ports: 
+          - "5006:80"

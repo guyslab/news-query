@@ -1,0 +1,19 @@
+$small: 510px;
+
+.card {
+    border-radius: 16px;
+    margin: 0 32px;
+    display: block;
+    overflow-y: auto;  
+    height: 100%;  
+
+    img {
+        width: 520px;
+    }
+
+    @media screen and (max-width: $small) {
+        img {
+            width: 306px;
+        }
+    }
+}
