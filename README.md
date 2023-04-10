@@ -1,4 +1,4 @@
-# news-app
+# news-query
 
 ## Run the app
 
